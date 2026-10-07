@@ -92,7 +92,10 @@ A single legacy `image` field counts as one item.
 ## Content sections
 Rendered by JS from JSON, with TODO placeholders until real content exists.
 - Experience and education: `data/experience.json`, a plain vertical list with a thin accent marker. No card rows.
-- Skills: `data/skills.json`, grouped by category, plain text tags. No logo grid.
+- Skills: `data/skills.json`, grouped by category. Items are tech ids from `data/tech.json`.
+  Each renders as a small uniform bordered tile with a single-color icon (28px, muted, accent on hover)
+  and a label, in a responsive grid. Single-color icons are allowed here; full-color logos are not.
+  An id with no entry or no icon renders label-only. Tiles stay small so it never reads as a feature-card row.
 - Recently updated repos: optional strip, 4 newest non-fork repos from the GitHub API.
   Set `GITHUB_USERNAME` in `js/repos.js`. Cached in sessionStorage, silent on failure or when unset.
 

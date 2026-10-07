@@ -1,13 +1,66 @@
 {
-  "python": { "label": "Python", "icon": "assets/icons/python.svg" },
-  "pytorch": { "label": "PyTorch", "icon": "assets/icons/pytorch.svg" },
-  "streamlit": { "label": "Streamlit", "icon": "assets/icons/streamlit.svg" },
-  "react": { "label": "React", "icon": "assets/icons/react.svg" },
-  "nodejs": { "label": "Node.js", "icon": "assets/icons/nodejs.svg" },
-  "typescript": { "label": "TypeScript", "icon": "assets/icons/typescript.svg" },
-  "javascript": { "label": "JavaScript", "icon": "assets/icons/javascript.svg" },
-  "aws": { "label": "AWS", "icon": "assets/icons/aws.svg" },
-  "docker": { "label": "Docker", "icon": "assets/icons/docker.svg" },
-  "postgresql": { "label": "PostgreSQL", "icon": "assets/icons/postgresql.svg" },
-  "fastapi": { "label": "FastAPI", "icon": "assets/icons/fastapi.svg" }
+  "python": {
+    "label": "Python",
+    "icon": "assets/icons/python.svg"
+  },
+  "pytorch": {
+    "label": "PyTorch",
+    "icon": "assets/icons/pytorch.svg"
+  },
+  "streamlit": {
+    "label": "Streamlit",
+    "icon": "assets/icons/streamlit.svg"
+  },
+  "react": {
+    "label": "React",
+    "icon": "assets/icons/react.svg"
+  },
+  "nodejs": {
+    "label": "Node.js",
+    "icon": "assets/icons/nodejs.svg"
+  },
+  "typescript": {
+    "label": "TypeScript",
+    "icon": "assets/icons/typescript.svg"
+  },
+  "javascript": {
+    "label": "JavaScript",
+    "icon": "assets/icons/javascript.svg"
+  },
+  "aws": {
+    "label": "AWS",
+    "icon": "assets/icons/aws.svg"
+  },
+  "docker": {
+    "label": "Docker",
+    "icon": "assets/icons/docker.svg"
+  },
+  "postgresql": {
+    "label": "PostgreSQL",
+    "icon": "assets/icons/postgresql.svg"
+  },
+  "fastapi": {
+    "label": "FastAPI",
+    "icon": "assets/icons/fastapi.svg"
+  },
+  "scikit-learn": {
+    "label": "scikit-learn",
+    "icon": "assets/icons/scikit-learn.svg"
+  },
+  "numpy": {
+    "label": "NumPy",
+    "icon": "assets/icons/numpy.svg"
+  },
+  "pandas": {
+    "label": "pandas",
+    "icon": "assets/icons/pandas.svg"
+  },
+  "git": {
+    "label": "Git",
+    "icon": "assets/icons/git.svg"
+  },
+  "linux": {
+    "label": "Linux",
+    "icon": "assets/icons/linux.svg"
+  }
 }

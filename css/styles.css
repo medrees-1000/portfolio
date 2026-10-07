@@ -159,12 +159,6 @@ a[aria-disabled="true"] { color: var(--muted); cursor: not-allowed; text-decorat
   -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat;
 }
 
-/* Tags */
-.tags { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.tags li { border: 1px solid var(--border); border-radius: 999px; padding: 3px 12px; font-size: 0.82rem; color: var(--muted); }
-.section .tags { margin-bottom: 0; }
-.section .tags li { color: var(--text); font-size: 1rem; }
-
 /* Timeline */
 .timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 36px; }
 .timeline-item { border-left: 2px solid var(--accent); padding-left: 24px; }
@@ -172,9 +166,24 @@ a[aria-disabled="true"] { color: var(--muted); cursor: not-allowed; text-decorat
 .timeline-meta { color: var(--muted); font-size: 1.1rem; margin: 0 0 12px; }
 .timeline-bullets { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 1.1rem; max-width: 75ch; }
 
-/* Skills */
-.skills { display: grid; gap: 20px; }
-.skill-group h4 { font: 500 1rem var(--font-body); color: var(--muted); margin: 0 0 12px; }
+/* Skills: small uniform tiles in a responsive grid per category */
+.skills { display: grid; gap: 32px; }
+.skill-group h4 { font: 500 1rem var(--font-body); color: var(--muted); margin: 0 0 14px; }
+.skill-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); }
+.skill {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  min-height: 96px; padding: 14px 8px; text-align: center;
+  border: 1px solid var(--border); border-radius: 10px;
+  color: var(--muted); font-size: 0.95rem;
+  transition: color var(--ease), border-color var(--ease);
+}
+.skill:hover { color: var(--accent); border-color: var(--accent); }
+.skill-icon {
+  width: 28px; height: 28px; background-color: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat;
+}
+.skill-label { color: var(--text); transition: color var(--ease); }
+.skill:hover .skill-label { color: var(--accent); }
 
 /* Recent repos */
 .repos { margin-top: 60px; }

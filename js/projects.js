@@ -1,6 +1,7 @@
 // Renders project cards from data/projects.json. Add an entry there to add a project.
 import { el, getJSON } from "./dom.js";
 import { createCarousel } from "./carousel.js";
+import { techMap as techPromise, iconNode } from "./tech.js";
 
 const list = document.getElementById("projects-list");
 
@@ -23,13 +24,8 @@ function link(label, href, ariaLabel, className) {
 function techChip(id, techMap) {
   const tech = techMap[id] || { label: id };
   const li = el("li", "chip");
-  if (tech.icon) {
-    const icon = el("span", "chip-icon");
-    // Resolve against the page: var() URLs otherwise resolve relative to the stylesheet.
-    icon.style.setProperty("--icon", 'url("' + new URL(tech.icon, document.baseURI).href + '")');
-    icon.setAttribute("aria-hidden", "true");
-    li.appendChild(icon);
-  }
+  const icon = iconNode(tech, "chip-icon");
+  if (icon) li.appendChild(icon);
   li.appendChild(el("span", "", tech.label));
   return li;
 }
@@ -67,7 +63,7 @@ function renderProject(p, techMap, isFirst) {
   return article;
 }
 
-Promise.all([getJSON("data/projects.json"), getJSON("data/tech.json").catch(() => ({}))])
+Promise.all([getJSON("data/projects.json"), techPromise])
   .then(([projects, techMap]) => {
     projects.forEach((p, i) => list.appendChild(renderProject(p, techMap, i === 0)));
   })
