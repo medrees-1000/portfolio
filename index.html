@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="amber">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,14 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <!-- BEGIN TEMP SWITCHER -->
-  <script>
-    try {
-      var t = localStorage.getItem("theme");
-      if (t === "amber" || t === "green" || t === "violet") document.documentElement.dataset.theme = t;
-    } catch (e) {}
-  </script>
-  <!-- END TEMP SWITCHER -->
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -121,19 +113,9 @@
     </div>
   </footer>
 
-  <!-- BEGIN TEMP SWITCHER -->
-  <div class="theme-switcher" role="group" aria-label="Theme (temporary)">
-    <button type="button" data-theme-choice="amber" aria-label="Amber theme"></button>
-    <button type="button" data-theme-choice="green" aria-label="Green theme"></button>
-    <button type="button" data-theme-choice="violet" aria-label="Violet theme"></button>
-  </div>
-  <!-- END TEMP SWITCHER -->
 
   <script src="js/main.js"></script>
   <script src="js/projects.js"></script>
   <script src="js/contact.js"></script>
-  <!-- BEGIN TEMP SWITCHER -->
-  <script src="js/theme-switcher.js"></script>
-  <!-- END TEMP SWITCHER -->
 </body>
 </html>

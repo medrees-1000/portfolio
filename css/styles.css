@@ -4,7 +4,7 @@
   --text: #EDEDED;
   --muted: #8A8A8F;
   --border: #26262A;
-  --accent: #F5A524;
+  --accent: #3DDC84;
   --on-accent: #0B0B0C;
 
   --font-head: "Space Grotesk", system-ui, sans-serif;
@@ -12,9 +12,6 @@
   --radius: 12px;
   --ease: 150ms ease;
 }
-
-:root[data-theme="green"] { --accent: #3DDC84; --on-accent: #0B0B0C; }
-:root[data-theme="violet"] { --accent: #6366F1; --on-accent: #FFFFFF; }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -157,24 +154,6 @@ textarea { resize: vertical; min-height: 130px; }
 /* Footer */
 .footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); font-size: 0.9rem; }
 .footer p { margin: 0; }
-
-/* BEGIN TEMP SWITCHER */
-.theme-switcher {
-  position: fixed; right: 16px; bottom: 16px; z-index: 40;
-  display: flex; gap: 8px; padding: 8px 10px;
-  background: var(--card); border: 1px solid var(--border); border-radius: 999px;
-}
-.theme-switcher button {
-  width: 18px; height: 18px; padding: 0; border-radius: 50%;
-  border: 2px solid var(--card); cursor: pointer;
-  transition: transform var(--ease);
-}
-.theme-switcher button:hover { transform: scale(1.15); }
-.theme-switcher button[data-theme-choice="amber"] { background: #F5A524; }
-.theme-switcher button[data-theme-choice="green"] { background: #3DDC84; }
-.theme-switcher button[data-theme-choice="violet"] { background: #6366F1; }
-.theme-switcher button[aria-pressed="true"] { outline: 1px solid var(--text); outline-offset: 2px; }
-/* END TEMP SWITCHER */
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
