@@ -1,0 +1,50 @@
+/* Media carousel and lightbox */
+.carousel { display: grid; gap: 12px; border-radius: 8px; }
+.carousel:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+.slides {
+  display: flex; overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scrollbar-width: none;
+  border: 1px solid var(--border); border-radius: 8px;
+}
+.slides::-webkit-scrollbar { display: none; }
+
+.slide { flex: 0 0 100%; min-width: 0; aspect-ratio: 16 / 9; scroll-snap-align: start; scroll-snap-stop: always; background: var(--bg); }
+.slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slide video { width: 100%; height: 100%; object-fit: contain; display: block; background: #000; }
+.slide-open { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.slide-open:focus-visible { outline-offset: -3px; }
+
+.media-missing {
+  display: grid; place-items: center; width: 100%; height: 100%; padding: 16px;
+  background: var(--card); color: var(--muted); font-size: 0.9rem; text-align: center;
+}
+
+.carousel-bar { display: flex; align-items: center; gap: 10px; }
+.dots { display: flex; flex: 1; flex-wrap: wrap; justify-content: center; }
+.dot { width: 24px; height: 24px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+.dot::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); transition: background var(--ease); }
+.dot:hover::before, .dot[aria-current="true"]::before { background: var(--accent); }
+.counter, .lightbox-counter { color: var(--muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; text-align: center; min-width: 3.6em; }
+.caption { margin: 0; color: var(--muted); font-size: 0.9rem; min-height: 1.4em; }
+
+.arrow {
+  width: 36px; height: 36px; flex: none; display: grid; place-items: center; padding: 0;
+  background: transparent; color: var(--text); border: 1px solid var(--border); border-radius: 50%; cursor: pointer;
+  transition: color var(--ease), border-color var(--ease);
+}
+.arrow:hover:not(:disabled) { color: var(--accent); border-color: var(--accent); }
+.arrow:disabled { opacity: 0.35; cursor: default; }
+
+/* Lightbox (native dialog) */
+.lightbox {
+  padding: 16px; max-width: 94vw; max-height: 94vh; overflow: auto;
+  background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: var(--radius);
+}
+.lightbox::backdrop { background: rgba(0, 0, 0, 0.88); }
+.lightbox img { display: block; width: min(1100px, 86vw); max-height: 70vh; height: auto; object-fit: contain; margin: 0 auto; }
+.lightbox-caption { margin: 12px 0 0; color: var(--muted); font-size: 0.9rem; }
+.lightbox-caption:empty { display: none; }
+.lightbox-bar { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 14px; }
+.lightbox-bar [hidden] { display: none; }
+.lightbox-bar .btn { margin-right: auto; }

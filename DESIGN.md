@@ -42,6 +42,18 @@ Icons come from Simple Icons (CC0), stored in `assets/icons/`, drawn single colo
 with a CSS mask so they follow `currentColor`: muted by default, accent on hover.
 No full-color logos, no hotlinking. A missing icon means a label-only chip.
 
+## Media carousel
+No libraries. `media[]` items are `{ type: "image" | "video", src, alt, poster?, caption? }`.
+A single legacy `image` field counts as one item.
+- Native CSS scroll-snap scroller, fixed 16:9 slides (no layout shift).
+- Prev/next buttons, dots (24px hit area), "2 / 5" counter. Controls are hidden for a single item.
+- Videos: controls, muted, playsinline, `preload="metadata"`, no autoplay, paused when the slide leaves view.
+- Arrow keys work when the carousel (or its controls) is focused.
+- Clicking an image opens a native `<dialog>` lightbox. Esc closes it and focus returns to the trigger.
+- Only the first image of the first project is eager. Every other image is `loading="lazy"`.
+- A file that fails to load is replaced by a neutral placeholder block.
+- With `prefers-reduced-motion`, slides jump instead of animating.
+
 ## Motion
 Short, subtle hover transitions only. Respect `prefers-reduced-motion`.
 

@@ -122,11 +122,10 @@ a:hover { opacity: 0.8; }
 .project h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 14px; }
 .project-body > p { color: var(--muted); }
 .project-media { min-width: 0; }
-.media-fill { width: 100%; aspect-ratio: 16 / 9; height: auto; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
 .highlights { list-style: none; margin: 0 0 22px; padding: 0; display: grid; gap: 8px; }
 .highlights li { position: relative; padding-left: 18px; }
 .highlights li::before { content: ""; position: absolute; left: 2px; top: 0.7em; width: 4px; height: 4px; border-radius: 50%; background: var(--muted); }
-.card-links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; }
+.card-links { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 @media (min-width: 900px) {
   .project { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 40px; padding: 28px; }
 }

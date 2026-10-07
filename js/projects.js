@@ -1,5 +1,6 @@
 // Renders project cards from data/projects.json. Add an entry there to add a project.
 import { el, getJSON } from "./dom.js";
+import { createCarousel } from "./carousel.js";
 
 const list = document.getElementById("projects-list");
 
@@ -33,22 +34,12 @@ function techChip(id, techMap) {
   return li;
 }
 
-function renderMedia(p) {
-  const wrap = el("div", "project-media");
-  const first = mediaOf(p)[0];
-  if (first) {
-    const img = el("img", "media-fill");
-    img.src = first.poster || first.src;
-    img.alt = first.alt || "";
-    wrap.appendChild(img);
-  }
-  return wrap;
-}
-
-function renderProject(p, techMap) {
+function renderProject(p, techMap, isFirst) {
   const article = el("article", "project");
   article.id = p.id;
-  article.appendChild(renderMedia(p));
+  const media = el("div", "project-media");
+  media.appendChild(createCarousel(mediaOf(p), p.title + " media", isFirst));
+  article.appendChild(media);
 
   const body = el("div", "project-body");
   body.appendChild(el("h3", "", p.title));
@@ -78,8 +69,9 @@ function renderProject(p, techMap) {
 
 Promise.all([getJSON("data/projects.json"), getJSON("data/tech.json").catch(() => ({}))])
   .then(([projects, techMap]) => {
-    projects.forEach((p) => list.appendChild(renderProject(p, techMap)));
+    projects.forEach((p, i) => list.appendChild(renderProject(p, techMap, i === 0)));
   })
-  .catch(() => {
+  .catch((err) => {
+    console.error(err);
     list.appendChild(el("p", "muted", "Projects could not be loaded. Please try again later."));
   });
