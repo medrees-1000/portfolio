@@ -57,6 +57,14 @@ Floating pill, about 80px tall, max-width 1200px, text about 17 to 18px, icons 2
 - The open mobile menu uses the same fill (`.menu-open`) so it stays readable over the hero.
 - **This is the only element allowed to use backdrop blur.** Everything else stays opaque.
 
+## Layout and type scale
+One content container for hero, Projects, About (timeline included) and Contact:
+max-width 1200px, side padding `--gutter` (`clamp(20px, 4vw, 48px)`).
+- Section headings `clamp(2.5rem, 5vw, 4rem)`. About paragraph 1.25rem, about 68ch measure.
+- Timeline titles 1.35rem, body 1.1rem.
+- Project card: title 2rem, description 1.15rem, highlights 1.05rem, chips 0.95rem with 20px icons.
+  Roomy padding (44px 40px on desktop). Carousel stays at 60% width.
+
 ## Projects
 One card type. Each project is a full-width card: media on the left (about 60%),
 details on the right on desktop, stacked on mobile. Never a card grid.
