@@ -150,6 +150,25 @@ a:hover { opacity: 0.8; }
 .section .tags { margin-bottom: 0; }
 .section .tags li { color: var(--text); font-size: 0.9rem; }
 
+/* Timeline */
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; }
+.timeline-item { border-left: 2px solid var(--accent); padding-left: 20px; }
+.timeline-item h4 { font: 700 1.1rem var(--font-head); margin: 0 0 4px; }
+.timeline-meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 10px; }
+.timeline-bullets { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+
+/* Skills */
+.skills { display: grid; gap: 20px; }
+.skill-group h4 { font: 500 0.9rem var(--font-body); color: var(--muted); margin: 0 0 8px; }
+
+/* Recent repos */
+.repos { margin-top: 60px; }
+.repo-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 24px 40px; }
+@media (min-width: 700px) { .repo-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.repo-name { font-weight: 600; }
+.repo-desc { color: var(--muted); margin: 4px 0 0; }
+.repo-meta { color: var(--muted); font-size: 0.85rem; margin: 4px 0 0; }
+
 /* Form */
 .form { margin-top: 28px; display: grid; gap: 18px; }
 .field { display: grid; gap: 6px; }

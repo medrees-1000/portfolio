@@ -1,0 +1,14 @@
+[
+  {
+    "role": "TODO Role or degree",
+    "organization": "TODO Organization",
+    "dates": "TODO Start to End",
+    "bullets": ["TODO What you did or studied", "TODO Another point"]
+  },
+  {
+    "role": "TODO Role or degree",
+    "organization": "TODO Organization",
+    "dates": "TODO Start to End",
+    "bullets": ["TODO What you did or studied"]
+  }
+]

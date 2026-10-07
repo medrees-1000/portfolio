@@ -23,7 +23,7 @@ All colors are CSS variables on `:root` (see top of `css/styles.css`).
 The site is locked to one green accent: `--accent` #3DDC84, `--on-accent` #0B0B0C,
 set directly on `:root`. There is no theme switching and no `data-theme` attribute.
 
-The accent is used only for the name, links, buttons and hover/active states.
+The accent is used only for the name, links, buttons, hover/active states and the thin timeline marker.
 
 ## Avoid
 Gradients, glow orbs, sparkles, emojis as icons, drop shadows, glassmorphism,
@@ -53,6 +53,13 @@ A single legacy `image` field counts as one item.
 - Only the first image of the first project is eager. Every other image is `loading="lazy"`.
 - A file that fails to load is replaced by a neutral placeholder block.
 - With `prefers-reduced-motion`, slides jump instead of animating.
+
+## Content sections
+Rendered by JS from JSON, with TODO placeholders until real content exists.
+- Experience and education: `data/experience.json`, a plain vertical list with a thin accent marker. No card rows.
+- Skills: `data/skills.json`, grouped by category, plain text tags. No logo grid.
+- Recently updated repos: optional strip, 4 newest non-fork repos from the GitHub API.
+  Set `GITHUB_USERNAME` in `js/repos.js`. Cached in sessionStorage, silent on failure or when unset.
 
 ## Motion
 Short, subtle hover transitions only. Respect `prefers-reduced-motion`.
