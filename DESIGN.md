@@ -12,7 +12,7 @@ All colors are CSS variables on `:root` (see top of `css/styles.css`).
 
 | Variable | Value |
 | --- | --- |
-| `--bg` | #0B0B0C |
+| `--bg` | #0B0B0C (`--bg-rgb` holds the same value for translucent fills) |
 | `--card` | #141416 |
 | `--text` | #EDEDED |
 | `--muted` | #8A8A8F |
@@ -26,7 +26,7 @@ set directly on `:root`. There is no theme switching and no `data-theme` attribu
 The accent is used only for the name, links, buttons, hover/active states and the thin timeline marker.
 
 ## Avoid
-Gradients, glow orbs, sparkles, emojis as icons, drop shadows, glassmorphism,
+Gradients, glow orbs, sparkles, emojis as icons, drop shadows, glassmorphism (see the one navbar exception below),
 fake testimonials, three-feature-card rows, em dashes in copy,
 "it's not X, it's Y" phrasing.
 
@@ -47,6 +47,15 @@ If the file is missing, the buttons are disabled and a short TODO note shows. No
 If `assets/images/logo.svg` exists it is used in the navbar center (about 40px high, link `aria-label`
 is the name) and as the favicon. Otherwise the initials from `profile.json` render as a wordmark in
 the heading font. Never generate or imitate an existing brand or character logo.
+
+## Navbar
+Floating pill, about 80px tall, max-width 1200px, text about 17 to 18px, icons 28px, click targets at least 44px.
+- At the top of the page it is transparent: no border, no blur.
+- After scrolling more than 8px (`.scrolled`, passive scroll listener) it gets a translucent
+  fill (`--bg` at 70%), `backdrop-filter: blur(14px)` and a 1px border, animated over 200ms.
+  Browsers without backdrop-filter get a 94% solid fill. Reduced motion: no animation.
+- The open mobile menu uses the same fill (`.menu-open`) so it stays readable over the hero.
+- **This is the only element allowed to use backdrop blur.** Everything else stays opaque.
 
 ## Projects
 One card type. Each project is a full-width card: media on the left (about 60%),

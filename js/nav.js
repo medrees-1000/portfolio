@@ -1,10 +1,12 @@
 // Mobile nav toggle.
+const nav = document.querySelector(".nav");
 const toggle = document.querySelector(".nav-toggle");
 const menu = document.getElementById("nav-right");
 
 function setOpen(open) {
   toggle.setAttribute("aria-expanded", String(open));
   menu.classList.toggle("open", open);
+  nav.classList.toggle("menu-open", open);
 }
 
 toggle.addEventListener("click", () => setOpen(toggle.getAttribute("aria-expanded") !== "true"));
@@ -27,3 +29,10 @@ const spy = new IntersectionObserver(
   { rootMargin: "-40% 0px -55% 0px" }
 );
 sections.forEach((s) => spy.observe(s));
+
+// Transparent at the top, translucent with blur once scrolled past a few pixels.
+function updateScrolled() {
+  nav.classList.toggle("scrolled", window.scrollY > 8);
+}
+window.addEventListener("scroll", updateScrolled, { passive: true });
+updateScrolled();
