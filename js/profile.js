@@ -49,7 +49,7 @@ function apply(p) {
       a.rel = "noopener noreferrer";
     }
     if (a.hasAttribute("data-download")) {
-      a.setAttribute("download", p.name.trim().replace(/\s+/g, "-") + "-Resume.pdf");
+      a.setAttribute("download", p.resumeFilename || p.name.trim() + " Resume.pdf");
     }
   });
 

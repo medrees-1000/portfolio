@@ -31,7 +31,8 @@ fake testimonials, three-feature-card rows, em dashes in copy,
 "it's not X, it's Y" phrasing.
 
 ## Profile data
-`data/profile.json` is the single source for name, initials, email, github, linkedin and resume.
+`data/profile.json` is the single source for name, initials, email, github, linkedin, resume (path)
+and resumeFilename (the exact name visitors get on download, spaces included).
 `js/profile.js` fills the page from it (hero, footer, nav icons, contact, resume buttons, copy-email,
 page title, Open Graph and Twitter titles). Do not hard-code these values in HTML.
 - Bind with `data-profile`, `data-profile-value` and `data-profile-link`.
