@@ -65,6 +65,13 @@ max-width 1200px, side padding `--gutter` (`clamp(20px, 4vw, 48px)`).
 - Project card: title 2rem, description 1.15rem, highlights 1.05rem, chips 0.95rem with 20px icons.
   Roomy padding (44px 40px on desktop). Carousel stays at 60% width.
 
+## Contact
+Same container. Desktop: two columns. Left: a short lead line (TODO until written) and link rows,
+each with a single-color icon, label, value (email address, GitHub username, LinkedIn handle) and a
+subtle arrow. The email row has the copy button, and a Resume row follows. Right: the form with
+56px inputs at about 17px, visible labels and focus, a large submit button and inline success and
+error states. Stacked on mobile. Icons come from the SVG sprite at the top of `index.html`.
+
 ## Projects
 One card type. Each project is a full-width card: media on the left (about 60%),
 details on the right on desktop, stacked on mobile. Never a card grid.

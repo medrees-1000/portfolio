@@ -105,36 +105,62 @@
     <section class="section reveal" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <h2 id="contact-title">Contact</h2>
-        <p>
-          <a data-profile-link="email" data-profile-value="email"></a>
-          <button class="copy-btn" id="copy-email" type="button">Copy email</button>
-          <span class="copied" id="copy-status" role="status"></span>
-        </p>
-        <p>
-          <a data-profile-link="github">GitHub</a>
-          <span class="muted"> / </span>
-          <a data-profile-link="linkedin">LinkedIn</a>
-          <span class="muted"> / </span>
-          <a data-profile-link="resume" data-new-tab>Resume</a>
-        </p>
-        <!-- TODO: set FORMSPREE_ENDPOINT in js/contact.js -->
-        <form class="form" id="contact-form" novalidate>
-          <div class="field">
-            <label for="cf-name">Name</label>
-            <input id="cf-name" name="name" type="text" autocomplete="name" required>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="contact-lead">TODO Short line inviting people to get in touch.</p>
+            <ul class="contact-links">
+              <li class="contact-item" data-profile-item>
+                <a class="contact-row" data-profile-link="email">
+                  <svg class="row-icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                  <span class="row-text"><span class="row-label">Email</span><span class="row-value" data-profile-value="email"></span></span>
+                  <svg class="row-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+                <button class="copy-btn" id="copy-email" type="button">Copy email</button>
+              </li>
+              <li class="contact-item" data-profile-item>
+                <a class="contact-row" data-profile-link="github">
+                  <svg class="row-icon" aria-hidden="true"><use href="#i-github"/></svg>
+                  <span class="row-text"><span class="row-label">GitHub</span><span class="row-value" data-profile-value="github"></span></span>
+                  <svg class="row-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+              </li>
+              <li class="contact-item" data-profile-item>
+                <a class="contact-row" data-profile-link="linkedin">
+                  <svg class="row-icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+                  <span class="row-text"><span class="row-label">LinkedIn</span><span class="row-value" data-profile-value="linkedin"></span></span>
+                  <svg class="row-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+              </li>
+              <li class="contact-item" data-profile-item>
+                <a class="contact-row" data-profile-link="resume" data-new-tab>
+                  <svg class="row-icon" aria-hidden="true"><use href="#i-file"/></svg>
+                  <span class="row-text"><span class="row-label">Resume</span><span class="row-value" data-resume-value>PDF</span></span>
+                  <svg class="row-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+              </li>
+            </ul>
+            <p class="copied" id="copy-status" role="status"></p>
           </div>
-          <div class="field">
-            <label for="cf-email">Email</label>
-            <input id="cf-email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label for="cf-message">Message</label>
-            <textarea id="cf-message" name="message" rows="5" required></textarea>
-          </div>
-          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button class="btn" type="submit">Send message</button>
-          <p class="status" id="form-status" role="status"></p>
-        </form>
+
+          <!-- TODO: set FORMSPREE_ENDPOINT in js/contact.js -->
+          <form class="form" id="contact-form" novalidate>
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="6" required></textarea>
+            </div>
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn btn-lg" type="submit">Send message</button>
+            <p class="status" id="form-status" role="status"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
