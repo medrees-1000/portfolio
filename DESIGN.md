@@ -3,7 +3,9 @@
 ## Look
 - Near-black background, one accent color.
 - Headings: Space Grotesk 700. Body: Inter. Both from Google Fonts.
-- Separation by 1px borders only. No shadows.
+- Cards, inputs and chips are outlined with 1px borders. No shadows.
+- No horizontal rules: no `border-top`, `border-bottom` or `<hr>` between sections.
+  Sections are separated by vertical spacing only.
 
 ## Colors
 All colors are CSS variables on `:root` (see top of `css/styles.css`).

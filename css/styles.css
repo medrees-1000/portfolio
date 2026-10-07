@@ -106,7 +106,7 @@ a:hover { opacity: 0.8; }
 .support { color: var(--muted); max-width: 52ch; margin: 0; }
 
 /* Sections */
-.section { padding: 70px 0; border-top: 1px solid var(--border); }
+.section { padding: 90px 0; }
 .section h2 { font-size: clamp(1.8rem, 5vw, 2.6rem); margin-bottom: 32px; }
 .sub { font-size: 1.1rem; margin: 32px 0 12px; }
 
@@ -118,7 +118,7 @@ a:hover { opacity: 0.8; }
   transition: border-color var(--ease);
 }
 .card:hover { border-color: var(--accent); }
-.card-img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; height: auto; border-bottom: 1px solid var(--border); }
+.card-img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; height: auto; }
 .card-body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
 .card h3 { font-size: 1.35rem; margin-bottom: 10px; }
 .card p { color: var(--muted); }
@@ -152,7 +152,7 @@ textarea { resize: vertical; min-height: 130px; }
 .status.err { color: #FF8A80; }
 
 /* Footer */
-.footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); font-size: 0.9rem; }
+.footer { padding: 60px 0 40px; color: var(--muted); font-size: 0.9rem; }
 .footer p { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) {
