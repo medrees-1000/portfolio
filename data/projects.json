@@ -1,0 +1,22 @@
+[
+  {
+    "id": "todo-visual-project",
+    "type": "visual",
+    "title": "TODO Visual project title",
+    "description": "TODO One or two sentences about what this project does.",
+    "tags": ["TODO tag", "TODO tag"],
+    "image": "assets/images/project-placeholder.svg",
+    "github": "https://github.com/TODO",
+    "live": "https://example.com/TODO"
+  },
+  {
+    "id": "todo-text-project",
+    "type": "text",
+    "title": "TODO Text project title",
+    "description": "TODO One or two sentences about what this project does.",
+    "tags": ["TODO tag", "TODO tag"],
+    "results": "TODO One line with a measurable result.",
+    "github": "https://github.com/TODO",
+    "live": ""
+  }
+]
