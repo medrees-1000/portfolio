@@ -43,6 +43,11 @@ The path comes from `data/profile.json`. About has a "Download my Resume" button
 (`download="<Name>-Resume.pdf"`) and a secondary "View" link (new tab). Contact has a Resume link.
 If the file is missing, the buttons are disabled and a short TODO note shows. No broken links.
 
+## Logo
+If `assets/images/logo.svg` exists it is used in the navbar center (about 40px high, link `aria-label`
+is the name) and as the favicon. Otherwise the initials from `profile.json` render as a wordmark in
+the heading font. Never generate or imitate an existing brand or character logo.
+
 ## Projects
 One card type. Each project is a full-width card: media on the left (about 60%),
 details on the right on desktop, stacked on mobile. Never a card grid.

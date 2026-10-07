@@ -80,7 +80,7 @@ a[aria-disabled="true"] { color: var(--muted); cursor: not-allowed; text-decorat
 .nav a { text-decoration: none; color: var(--text); font-size: 0.95rem; transition: color var(--ease); }
 .nav a:hover, .nav a[aria-current] { color: var(--accent); opacity: 1; }
 .logo { font: 700 1.1rem var(--font-head); letter-spacing: 0.02em; padding: 0 8px; }
-.logo img { height: 28px; }
+.logo-img { height: 40px; width: auto; }
 .icon-link { display: inline-flex; padding: 4px; }
 .nav-toggle, .only-mobile { display: none; }
 
