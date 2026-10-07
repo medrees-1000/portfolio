@@ -1,3 +1,4 @@
+import "./profile.js";
 import "./nav.js";
 import "./reveal.js";
 import "./projects.js";

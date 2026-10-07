@@ -16,3 +16,10 @@ export function getJSON(url) {
 export function prefersReducedMotion() {
   return matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
+
+// True when the URL answers 2xx with something other than an HTML fallback page.
+export function fileExists(url) {
+  return fetch(url, { method: "HEAD" })
+    .then((res) => res.ok && !/text\/html/.test(res.headers.get("content-type") || ""))
+    .catch(() => false);
+}

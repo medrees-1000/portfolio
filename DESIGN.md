@@ -30,6 +30,14 @@ Gradients, glow orbs, sparkles, emojis as icons, drop shadows, glassmorphism,
 fake testimonials, three-feature-card rows, em dashes in copy,
 "it's not X, it's Y" phrasing.
 
+## Profile data
+`data/profile.json` is the single source for name, initials, email, github, linkedin and resume.
+`js/profile.js` fills the page from it (hero, footer, nav icons, contact, resume buttons, copy-email,
+page title, Open Graph and Twitter titles). Do not hard-code these values in HTML.
+- Bind with `data-profile`, `data-profile-value` and `data-profile-link`.
+- GitHub and LinkedIn links open in a new tab with `rel="noopener noreferrer"`.
+- A link whose value is empty or contains TODO is hidden, never pointed at a broken URL.
+
 ## Projects
 One card type. Each project is a full-width card: media on the left (about 60%),
 details on the right on desktop, stacked on mobile. Never a card grid.
