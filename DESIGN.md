@@ -73,15 +73,14 @@ max-width 1200px, side padding `--gutter` (`clamp(20px, 4vw, 48px)`).
   Roomy padding (44px 40px on desktop). Carousel stays at 60% width.
 
 ## Contact
-Same container. Desktop: two columns. Left: a short lead line (TODO until written) and link rows,
-each with a single-color icon, label, value (email address, GitHub username, LinkedIn handle) and a
-subtle arrow. The email row has the copy button, and a Resume row follows. Right: the form with
-56px inputs at about 17px, visible labels and focus, a large submit button and inline success and
-error states. Stacked on mobile. Icons come from the SVG sprite at the top of `index.html`.
-
-## Hero
-Name `clamp(2.5rem, 6vw, 4.5rem)` in the heading font, on one line at 1280px and wider, wrapping
-cleanly on mobile. Intro line 1.5rem, supporting line 1.15rem, thin accent line on the left.
+Same container. Two columns from 1100px up, stacked below. Left: a short lead line (TODO until written)
+and three identical link rows (Email, GitHub, LinkedIn): single-color icon, label, value, trailing control.
+GitHub and LinkedIn end in a subtle arrow. Email ends in an icon-only copy button (`aria-label="Copy email address"`,
+44px target) that swaps to a check and shows a short "Copied" tag. There is no Resume row: the resume lives only in About.
+The email value never breaks mid-word: `white-space: nowrap` from 480px up, and below that a single `<wbr>`
+before the "@" (`overflow-wrap: normal`, `word-break: keep-all`). The link stays `mailto:`.
+Right: the form with 56px inputs at about 17px, visible labels and focus, a large filled "Send message"
+button and inline success and error states. Icons come from the SVG sprite at the top of `index.html`.
 
 ## Projects
 One card type. Each project is a full-width card: media on the left (about 60%),

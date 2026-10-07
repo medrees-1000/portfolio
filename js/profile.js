@@ -21,6 +21,16 @@ function displayValue(key, value) {
   return value;
 }
 
+// A single break opportunity right before the "@" so narrow screens never split a word or the domain.
+function setEmail(node, address) {
+  const at = address.indexOf("@");
+  if (at < 1) {
+    node.textContent = address;
+    return;
+  }
+  node.replaceChildren(address.slice(0, at), document.createElement("wbr"), address.slice(at));
+}
+
 function setMeta(selector, value) {
   const meta = document.querySelector(selector);
   if (meta) meta.setAttribute("content", value);
@@ -33,7 +43,9 @@ function apply(p) {
 
   document.querySelectorAll("[data-profile-value]").forEach((node) => {
     const key = node.dataset.profileValue;
-    node.textContent = isTodo(p[key]) ? "TODO" : displayValue(key, p[key]);
+    if (isTodo(p[key])) node.textContent = "TODO";
+    else if (key === "email") setEmail(node, p[key]);
+    else node.textContent = displayValue(key, p[key]);
   });
 
   document.querySelectorAll("[data-profile-link]").forEach((a) => {
