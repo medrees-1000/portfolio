@@ -1,21 +1,29 @@
 [
   {
-    "id": "todo-visual-project",
-    "type": "visual",
-    "title": "TODO Visual project title",
-    "description": "TODO One or two sentences about what this project does.",
-    "tags": ["TODO tag", "TODO tag"],
-    "image": "assets/images/project-placeholder.svg",
+    "id": "todo-project-one",
+    "title": "TODO Project title",
+    "description": "TODO Two to three sentences about what this project does, who it is for and how it works.",
+    "highlights": [
+      "TODO Highlight one",
+      "TODO Highlight two",
+      "TODO One measurable result"
+    ],
+    "tech": ["python", "streamlit", "pytorch"],
+    "media": [
+      { "type": "image", "src": "assets/images/project-placeholder.svg", "alt": "TODO Describe screenshot one", "caption": "TODO Caption one" },
+      { "type": "image", "src": "assets/images/project-placeholder-2.svg", "alt": "TODO Describe screenshot two" },
+      { "type": "video", "src": "assets/videos/todo-demo.mp4", "alt": "TODO Describe the demo video", "poster": "assets/images/project-placeholder.svg", "caption": "TODO Demo video" }
+    ],
     "github": "https://github.com/TODO",
     "live": "https://example.com/TODO"
   },
   {
-    "id": "todo-text-project",
-    "type": "text",
-    "title": "TODO Text project title",
-    "description": "TODO One or two sentences about what this project does.",
-    "tags": ["TODO tag", "TODO tag"],
-    "results": "TODO One line with a measurable result.",
+    "id": "todo-project-two",
+    "title": "TODO Second project title",
+    "description": "TODO Two to three sentences about this project. It uses the legacy single image field.",
+    "highlights": ["TODO Highlight one", "TODO Highlight two"],
+    "tech": ["python", "fastapi"],
+    "image": "assets/images/project-placeholder.svg",
     "github": "https://github.com/TODO",
     "live": ""
   }

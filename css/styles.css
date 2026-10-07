@@ -111,19 +111,39 @@ a:hover { opacity: 0.8; }
 .sub { font-size: 1.1rem; margin: 32px 0 12px; }
 
 /* Projects */
-.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
-.card {
+.projects { display: grid; gap: 40px; }
+.project {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px;
   background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
-  overflow: hidden; display: flex; flex-direction: column;
-  transition: border-color var(--ease);
+  padding: 20px; transition: border-color var(--ease);
 }
-.card:hover { border-color: var(--accent); }
-.card-img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; height: auto; }
-.card-body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
-.card h3 { font-size: 1.35rem; margin-bottom: 10px; }
-.card p { color: var(--muted); }
-.card .results { color: var(--text); border-left: 2px solid var(--border); padding-left: 12px; }
-.card-links { margin-top: auto; padding-top: 8px; display: flex; flex-wrap: wrap; gap: 10px; }
+.project:hover { border-color: var(--accent); }
+.project-body { display: flex; flex-direction: column; min-width: 0; }
+.project h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 14px; }
+.project-body > p { color: var(--muted); }
+.project-media { min-width: 0; }
+.media-fill { width: 100%; aspect-ratio: 16 / 9; height: auto; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
+.highlights { list-style: none; margin: 0 0 22px; padding: 0; display: grid; gap: 8px; }
+.highlights li { position: relative; padding-left: 18px; }
+.highlights li::before { content: ""; position: absolute; left: 2px; top: 0.7em; width: 4px; height: 4px; border-radius: 50%; background: var(--muted); }
+.card-links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; }
+@media (min-width: 900px) {
+  .project { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 40px; padding: 28px; }
+}
+
+/* Tech chips */
+.tech { list-style: none; margin: 0 0 26px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  border: 1px solid var(--border); border-radius: 999px;
+  padding: 4px 12px; font-size: 0.85rem; color: var(--muted);
+  transition: color var(--ease), border-color var(--ease);
+}
+.chip:hover { color: var(--accent); border-color: var(--accent); }
+.chip-icon {
+  width: 14px; height: 14px; background-color: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat;
+}
 
 /* Tags */
 .tags { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }

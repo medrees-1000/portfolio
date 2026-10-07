@@ -1,7 +1,7 @@
 // Contact form: posts to Formspree and shows inline success or error.
 
 // TODO: replace with your Formspree endpoint, e.g. "https://formspree.io/f/abcdwxyz"
-var FORMSPREE_ENDPOINT = "https://formspree.io/f/TODO";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/TODO";
 
 (function () {
   var form = document.getElementById("contact-form");
