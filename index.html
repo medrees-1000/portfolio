@@ -82,7 +82,11 @@
       <div class="container narrow">
         <h2 id="about-title">About</h2>
         <p>TODO Short paragraph about you: background, what you build, what you care about.</p>
-        <p><a class="btn" href="assets/resume/resume.pdf" download>Download my Resume</a></p>
+        <div class="actions">
+          <a class="btn" data-profile-link="resume" data-download>Download my Resume</a>
+          <a class="btn ghost" data-profile-link="resume" data-new-tab>View</a>
+          <span class="resume-note muted" hidden></span>
+        </div>
         <h3 class="sub">Experience and education</h3>
         <ol class="timeline" id="timeline"></ol>
         <h3 class="sub">Skills</h3>
@@ -102,6 +106,8 @@
           <a data-profile-link="github">GitHub</a>
           <span class="muted"> / </span>
           <a data-profile-link="linkedin">LinkedIn</a>
+          <span class="muted"> / </span>
+          <a data-profile-link="resume" data-new-tab>Resume</a>
         </p>
         <!-- TODO: set FORMSPREE_ENDPOINT in js/contact.js -->
         <form class="form" id="contact-form" novalidate>

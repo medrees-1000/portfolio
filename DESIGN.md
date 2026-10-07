@@ -38,6 +38,11 @@ page title, Open Graph and Twitter titles). Do not hard-code these values in HTM
 - GitHub and LinkedIn links open in a new tab with `rel="noopener noreferrer"`.
 - A link whose value is empty or contains TODO is hidden, never pointed at a broken URL.
 
+## Resume
+The path comes from `data/profile.json`. About has a "Download my Resume" button
+(`download="<Name>-Resume.pdf"`) and a secondary "View" link (new tab). Contact has a Resume link.
+If the file is missing, the buttons are disabled and a short TODO note shows. No broken links.
+
 ## Projects
 One card type. Each project is a full-width card: media on the left (about 60%),
 details on the right on desktop, stacked on mobile. Never a card grid.

@@ -1,5 +1,6 @@
 import "./profile.js";
 import "./nav.js";
+import "./resume.js";
 import "./reveal.js";
 import "./projects.js";
 import "./about.js";
