@@ -115,8 +115,8 @@ a[aria-disabled="true"] { color: var(--muted); cursor: not-allowed; text-decorat
 /* Hero */
 .hero { padding: 200px 0 90px; }
 .hero-inner { border-left: 3px solid var(--accent); padding-left: 24px; }
-.name { color: var(--accent); font-size: clamp(2.75rem, 9vw, 6.5rem); letter-spacing: -0.02em; overflow-wrap: anywhere; }
-.intro { font-size: clamp(1.35rem, 3vw, 2rem); margin: 24px 0 10px; max-width: 32ch; }
+.name { color: var(--accent); font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -0.02em; text-wrap: balance; }
+.intro { font-size: 1.5rem; margin: 20px 0 10px; max-width: 40ch; }
 .support { color: var(--muted); font-size: 1.15rem; max-width: 56ch; margin: 0; }
 
 /* Sections */

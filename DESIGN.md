@@ -73,6 +73,10 @@ subtle arrow. The email row has the copy button, and a Resume row follows. Right
 56px inputs at about 17px, visible labels and focus, a large submit button and inline success and
 error states. Stacked on mobile. Icons come from the SVG sprite at the top of `index.html`.
 
+## Hero
+Name `clamp(2.5rem, 6vw, 4.5rem)` in the heading font, on one line at 1280px and wider, wrapping
+cleanly on mobile. Intro line 1.5rem, supporting line 1.15rem, thin accent line on the left.
+
 ## Projects
 One card type. Each project is a full-width card: media on the left (about 60%),
 details on the right on desktop, stacked on mobile. Never a card grid.
