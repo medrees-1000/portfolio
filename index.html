@@ -6,6 +6,18 @@
   <title>TODO Your Name | Portfolio</title>
   <meta name="description" content="TODO Short description of the portfolio.">
   <meta name="theme-color" content="#0B0B0C">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <!-- TODO: fill in the Open Graph and Twitter values below -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TODO Your Name | Portfolio">
+  <meta property="og:description" content="TODO Short description of the portfolio.">
+  <meta property="og:url" content="TODO https://your-site.example/">
+  <meta property="og:image" content="TODO https://your-site.example/assets/images/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TODO Your Name | Portfolio">
+  <meta name="twitter:description" content="TODO Short description of the portfolio.">
+  <meta name="twitter:image" content="TODO https://your-site.example/assets/images/og.png">
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
@@ -53,7 +65,7 @@
       </div>
     </section>
 
-    <section class="section" id="projects" aria-labelledby="projects-title">
+    <section class="section reveal" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <h2 id="projects-title">Projects</h2>
         <div class="projects" id="projects-list" aria-live="polite">
@@ -66,7 +78,7 @@
       </div>
     </section>
 
-    <section class="section" id="about" aria-labelledby="about-title">
+    <section class="section reveal" id="about" aria-labelledby="about-title">
       <div class="container narrow">
         <h2 id="about-title">About</h2>
         <p>TODO Short paragraph about you: background, what you build, what you care about.</p>
@@ -78,11 +90,13 @@
       </div>
     </section>
 
-    <section class="section" id="contact" aria-labelledby="contact-title">
+    <section class="section reveal" id="contact" aria-labelledby="contact-title">
       <div class="container narrow">
         <h2 id="contact-title">Contact</h2>
         <p>
-          <a href="mailto:todo@example.com">todo@example.com</a>
+          <a id="email-link" href="mailto:todo@example.com">todo@example.com</a>
+          <button class="copy-btn" id="copy-email" type="button">Copy email</button>
+          <span class="copied" id="copy-status" role="status"></span>
           <span class="muted"> / </span>
           <a href="https://github.com/TODO" rel="noopener">GitHub</a>
           <span class="muted"> / </span>

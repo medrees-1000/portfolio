@@ -61,6 +61,13 @@ Rendered by JS from JSON, with TODO placeholders until real content exists.
 - Recently updated repos: optional strip, 4 newest non-fork repos from the GitHub API.
   Set `GITHUB_USERNAME` in `js/repos.js`. Cached in sessionStorage, silent on failure or when unset.
 
+## Polish
+- The nav link of the section in view is highlighted (accent, `aria-current="location"`).
+- Copy-email button shows a short "Copied" confirmation.
+- Sections fade and rise a few pixels once, disabled under `prefers-reduced-motion`.
+- Favicon, description, Open Graph and Twitter tags (TODO values), theme-color, skip link.
+- `404.html` uses the same styles and root-absolute asset paths.
+
 ## Motion
 Short, subtle hover transitions only. Respect `prefers-reduced-motion`.
 
