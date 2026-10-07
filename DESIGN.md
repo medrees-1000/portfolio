@@ -50,12 +50,14 @@ is the name) and as the favicon. Otherwise the initials from `profile.json` rend
 the heading font. Never generate or imitate an existing brand or character logo.
 
 ## Navbar
-Floating pill, about 80px tall, max-width 1200px, text about 17 to 18px, icons 28px, click targets at least 44px.
+Floating pill, about 96px tall (72px on mobile), max-width 1360px, 24px outer gutters, 32px inner padding.
+Text 1.2rem, icons 32px, initials wordmark 1.6rem, logo image 48px tall, all click targets at least 48px.
 - At the top of the page it is transparent: no border, no blur.
 - After scrolling more than 8px (`.scrolled`, passive scroll listener) it gets a translucent
   fill (`--bg` at 70%), `backdrop-filter: blur(14px)` and a 1px border, animated over 200ms.
   Browsers without backdrop-filter get a 94% solid fill. Reduced motion: no animation.
 - The open mobile menu uses the same fill (`.menu-open`) so it stays readable over the hero.
+- Anchored sections use `scroll-margin-top: 130px` so the bar never covers a heading.
 - **This is the only element allowed to use backdrop blur.** Everything else stays opaque.
 
 ## Layout and type scale
