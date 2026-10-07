@@ -13,7 +13,7 @@ profile.then(async (p) => {
   const img = el("img", "logo-img");
   img.src = LOGO;
   img.alt = "";
-  img.height = 40;
+  img.height = 48;
   link.replaceChildren(img);
 
   const icon = document.querySelector('link[rel="icon"]');

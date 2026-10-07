@@ -40,9 +40,13 @@ page title, Open Graph and Twitter titles). Do not hard-code these values in HTM
 - A link whose value is empty or contains TODO is hidden, never pointed at a broken URL.
 
 ## Resume
-The path comes from `data/profile.json`. About has a "Download my Resume" button
-(`download="<Name>-Resume.pdf"`) and a secondary "View" link (new tab). Contact has a Resume link.
-If the file is missing, the buttons are disabled and a short TODO note shows. No broken links.
+There is no resume page. The resume lives only in About, as two buttons that read `data-profile` values:
+"View my resume" (new tab, `rel="noopener noreferrer"`) and "Download my resume" (the `download`
+attribute is `resumeFilename` from `profile.json` exactly as written, falling back to `<name> Resume.pdf`).
+Both use the outlined style: transparent, 1px accent border, accent text, filled with the accent and
+`--on-accent` on hover and keyboard focus. That style is for these two buttons only; "Send message"
+stays a filled primary button. If the PDF is missing (HEAD request) both are disabled in muted text
+with a short TODO note. No line-through, no broken links.
 
 ## Logo
 If `assets/images/logo.svg` exists it is used in the navbar center (about 40px high, link `aria-label`

@@ -7,7 +7,6 @@ function disable(link) {
   link.removeAttribute("download");
   link.removeAttribute("target");
   link.setAttribute("aria-disabled", "true");
-  link.classList.add("disabled");
 }
 
 profile.then(async (p) => {
@@ -15,7 +14,6 @@ profile.then(async (p) => {
   if (await fileExists(p.resume)) return;
 
   document.querySelectorAll('[data-profile-link="resume"]').forEach(disable);
-  document.querySelectorAll("[data-resume-value]").forEach((v) => { v.textContent = "TODO: add PDF"; });
   document.querySelectorAll(".resume-note").forEach((note) => {
     note.textContent = "TODO: add " + p.resume;
     note.hidden = false;
